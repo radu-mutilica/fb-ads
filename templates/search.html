@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <title>Facebook Ads</title>
+    </head>
+    <body>
+        <h1>Facebook Ads</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ad ID</th>
+                    <th>Ad Name</th>
+                    <th>Impressions</th>
+                    <th>Spend</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ad in ads %}
+                <tr>
+                    <td>{{ ad.id }}</td>
+                    <td>{{ ad.name }}</td>
+                    <td>{{ ad.impressions }}</td>
+                    <td>{{ ad.spend }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

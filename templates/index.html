@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Facebook Ads Search</title>
+    </head>
+    <body>
+        <h1>Facebook Ads Search</h1>
+        <form action="/search" method="get">
+            <input type="text" name="search_terms">
+            <br>
+            <select multiple name="ad_reached_countries">
+                {% for item in countries %}
+                    <option value="{{ item.iso }}">{{ item.country }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <input type="submit" value="Search">
+        </form>
+    </body>
+</html>
