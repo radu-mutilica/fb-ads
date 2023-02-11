@@ -1,4 +1,5 @@
 import json
+import os
 
 import requests
 from flask import Flask, render_template, request
@@ -7,7 +8,7 @@ import utils
 
 app = Flask(__name__)
 
-access_token = "EAAMYtQ9zaewBAEmHFEk7gZBJNMJBMhFhfiMpkqAqjl82bm9PHndPaSYdN40ZBaZBgHZARoDWtJTs91IWZAZCE2cFoRwdAelCp3dU5Buuwr6iRAHMdU6FrM8abSfg4yH8hqaF0mEYcYaMIn171qe7ZBZB6QsTqvgjk7NgQvtbiXKlOLoengPOWgPSPphdYVCjd4M9Yl753aNWJhDNBgI5bO2Y"
+access_token = os.environ['FB_API_TOKEN']
 base_url = 'https://graph.facebook.com/v15.0/ads_archive'
 
 
